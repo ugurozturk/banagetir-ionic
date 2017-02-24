@@ -4,6 +4,7 @@ import { StatusBar, Splashscreen } from 'ionic-native';
 
 import { HomePage } from '../pages/homepage/homepage';
 import { ProfilePage } from '../pages/profile/profile';
+import { UrunlerPage } from '../pages/urunler/urunler';
 import { Page1 } from '../pages/page1/page1';
 import { Page2 } from '../pages/page2/page2';
 
@@ -26,7 +27,7 @@ export class MyApp {
 		{ title: 'HomePage', component: HomePage },
 		{ title: 'Profil', component: ProfilePage },
     { title: 'Harita', component: Page2 },
-    { title: 'Sipariş Ver', component: Page1 },
+    { title: 'Sipariş Ver', component: UrunlerPage },
     { title: 'Favoriler', component: Page1 },
     { title: 'Siparişlerim', component: Page1 }
     ];
