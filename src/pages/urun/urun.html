@@ -8,19 +8,58 @@
 </ion-header>
 
 <ion-content padding>
-
-<ion-card>
-  <img src="assets/images/kebab.jpg"/>
-  <ion-card-content>
-    <ion-card-title>
-      Kebap
+  <ion-card>
+    <ion-card-content>
+      <ion-card-title>
+        Kebap
       </ion-card-title>
-    <p>
-      The most popular industrial group ever, and largely
-      responsible for bringing the music to a mass audience.
-    </p>
-  </ion-card-content>
-</ion-card>
+    </ion-card-content>
+    <img src="assets/images/kebab.jpg" />
+  </ion-card>
 
+  <!-- Fiyat ve Sepete Ekle-->
+  <ion-card>
+    <ion-item actions>
+      <span ion-text item-left color="dark" class="item-bold">15 TL</span>
+      <button ion-button clear small color="primary" icon-left item-right>
+          <ion-icon name='basket'></ion-icon>
+          Sepete Ekle
+      </button>
+    </ion-item>
+  </ion-card>
 
+  <!-- Satıcı Adı ve Puanı -->
+  <ion-card>
+    <ion-item actions>
+      <span ion-text item-left color="dark" class="item-bold">Serkan Bey Restaurant</span>
+      <button ion-button clear small color="primary" icon-left item-right>
+          <ion-icon name='basket'></ion-icon>
+          Diğer Ürünler
+      </button>
+    </ion-item>
+  </ion-card>
+
+  <!-- Satıcı Adı ve Puanı -->
+  <ion-card>
+    <ion-item actions>
+      <button ion-button small color="primary" clear item-left icon-left>
+        <ion-icon name="bookmark"></ion-icon>
+        FAVORİLERE EKLE
+      </button>
+      <button ion-button small color="primary" clear icon-left item-right>
+          <ion-icon name='share-alt'></ion-icon>
+          Paylaş
+      </button>
+    </ion-item>
+  </ion-card>
+
+  <!-- -->
+  <ion-card>
+    <ion-item actions>
+      <button ion-button small color="primary" clear item-left icon-left>
+      Tüm Yorumlar
+      </button>
+      <span ion-text big color="primary" item-right class="item-bold">OOOXX ( X Yorum )</span>
+    </ion-item>
+  </ion-card>
 </ion-content>
