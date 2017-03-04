@@ -1,9 +1,11 @@
-ion-app._gmaps_cdv_ .nav-decor{
-  background-color: transparent !important;
-}
-
-page-profile {
-#map {
-        height: 70%;
+  page-profile {
+    #map {
+      height: 70%;
+      background-color: black;
     }
-}
+    ion-label {
+      color: inherit !important;
+    }
+  }
+
+  //.item-input .label-md, .item-select .label-md, .item-datetime .label-md

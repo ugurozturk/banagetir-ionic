@@ -1,30 +1,28 @@
 import { Component } from '@angular/core';
-import { NavController, Platform, ModalController } from 'ionic-angular';
+
+import { NavController, ViewController } from 'ionic-angular';
 import { Geolocation, GoogleMap, GoogleMapsEvent, GoogleMapsLatLng, CameraPosition, GoogleMapsMarkerOptions } from 'ionic-native';
 
-import { AdresEkle } from '../adresekle/adresekle';
-
 @Component({
-  selector: 'page-profile',
-  templateUrl: 'profile.html'
+  selector: 'page-adresekle',
+  templateUrl: 'adresekle.html'
 })
-export class ProfilePage {
-mapiYukle: boolean;
-adreslerim: string = "2";
-  constructor(public navCtrl: NavController, public plt: Platform, public modalCtrl: ModalController) {
-    if (plt.is('android')) {
-      this.mapiYukle = true;
-    }
+export class AdresEkle {
+
+  constructor(public navCtrl: NavController, public viewCtrl: ViewController) {
+
   }
-/*
+
   ngAfterViewInit() {
-    if (this.mapiYukle) {
-      this.loadMap();
-    }
- }
-*/
-/*
-loadMap() {
+    this.loadMap();
+    console.log("Load Map Çalıştı");
+  }
+
+
+    dismiss() {
+    this.viewCtrl.dismiss();
+  }
+  loadMap() {
  // make sure to create following structure in your view.html file
  // and add a height (for example 100%) to it, else the map won't be visible
  // <ion-content>
@@ -32,7 +30,7 @@ loadMap() {
  // </ion-content>
 
  // create a new map by passing HTMLElement
- let element: HTMLElement = document.getElementById('map');
+ let element: HTMLElement = document.getElementById('map2');
 
  let map = new GoogleMap(element);
 
@@ -69,24 +67,6 @@ loadMap() {
 }).catch((error) => {
   console.log('Error getting location', error);
 });
-}*/
-
-  adresChanged(event:any){
-    if (event == "0") {
-      this.presentModal();
-      console.log("Yeni Adres");
-    }
-    else {
-      console.log("Diğer Değer " + event);
-    }
-  }
-
-  presentModal() {
-    let modal = this.modalCtrl.create(AdresEkle);
-    modal.present();
-  }
-
+ }
 
 }
-
-
