@@ -17,11 +17,8 @@ export class ProfilePage {
 
   adresChanged(event: any) {
     if (event == "0") {
+      //Yeni Adres
       this.presentModal();
-      console.log("Yeni Adres");
-    }
-    else {
-      console.log("Diğer Değer " + event);
     }
   }
   adresEdit(event: any) {
@@ -38,8 +35,6 @@ export class ProfilePage {
       let modal = this.modalCtrl.create(AdresEkle);
       modal.present();
     }
-
-
   }
 }//Class ProfilePage End
 

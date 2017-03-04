@@ -10,6 +10,8 @@ export class AdresEkle {
   mapiYukle: boolean;
   constructor(public navCtrl: NavController, public plt: Platform, public viewCtrl: ViewController, params: NavParams) {
     console.log(params.get('adresid')); //Modal Açan Yerden Adres Çekildi
+    //Note: adresid kullanılarak Adres adını ve detayını doldur. Mapdaki MoveCamera yıda yap
+
 
     this.mapiYukle = false;
     if (plt.is('android')) {
