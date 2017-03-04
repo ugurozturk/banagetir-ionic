@@ -24,10 +24,22 @@ export class ProfilePage {
       console.log("Diğer Değer " + event);
     }
   }
+  adresEdit(event: any) {
+    console.log(event);
+    this.presentModal(event);
+  }
 
-  presentModal() {
-    let modal = this.modalCtrl.create(AdresEkle);
-    modal.present();
+  presentModal(adresid?: any) {
+    if (adresid != null) {
+      let modal = this.modalCtrl.create(AdresEkle, { adresid: adresid });
+      modal.present();
+    }
+    else {
+      let modal = this.modalCtrl.create(AdresEkle);
+      modal.present();
+    }
+
+
   }
 }//Class ProfilePage End
 

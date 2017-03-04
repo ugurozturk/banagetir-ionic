@@ -10,14 +10,21 @@
 
 <ion-content padding>
   <h3>Adreslerim</h3>
-    <ion-item>
-      <ion-label>Adreslerim</ion-label>
-      <ion-select [(ngModel)]="adreslerim" okText="Tamam" cancelText="İptal" (ionChange)="adresChanged(this.adreslerim)">
-        <ion-option value="1">İstanbul Evim</ion-option>
-        <ion-option value="2">Sivas Evim</ion-option>
-        <ion-option value="3">Cumhuriyet</ion-option>
-        <ion-option value="0">Yeni Adres Ekle..</ion-option>
-      </ion-select>
-    </ion-item>
+  <ion-row>
+    <ion-col>
+      <ion-item>
+        <ion-label>Adreslerim</ion-label>
+        <ion-select [(ngModel)]="adreslerim" okText="Tamam" cancelText="İptal" (ionChange)="adresChanged(this.adreslerim)">
+          <ion-option value="1">İstanbul Evim</ion-option>
+          <ion-option value="2">Sivas Evim</ion-option>
+          <ion-option value="3">Cumhuriyet</ion-option>
+          <ion-option value="0">Yeni Adres Ekle..</ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-col>
+    <ion-col width-20>
+      <button ion-button (click)="adresEdit(this.adreslerim)">Düzenle</button>
+    </ion-col>
+  </ion-row>
   <!--<div id="map"></div>-->
 </ion-content>

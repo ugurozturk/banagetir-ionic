@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, ViewController, Platform } from 'ionic-angular';
+import { NavController, ViewController, Platform, NavParams } from 'ionic-angular';
 import { Geolocation, GoogleMap, GoogleMapsEvent, GoogleMapsLatLng, CameraPosition, GoogleMapsMarkerOptions } from 'ionic-native';
 
 @Component({
@@ -8,7 +8,10 @@ import { Geolocation, GoogleMap, GoogleMapsEvent, GoogleMapsLatLng, CameraPositi
 })
 export class AdresEkle {
   mapiYukle: boolean;
-  constructor(public navCtrl: NavController, public plt: Platform, public viewCtrl: ViewController) {
+  constructor(public navCtrl: NavController, public plt: Platform, public viewCtrl: ViewController, params: NavParams) {
+    console.log(params.get('adresid')); //Modal Açan Yerden Adres Çekildi
+
+    this.mapiYukle = false;
     if (plt.is('android')) {
       this.mapiYukle = true;
     }
