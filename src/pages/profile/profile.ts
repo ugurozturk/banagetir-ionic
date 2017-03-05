@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, Platform, ModalController } from 'ionic-angular';
+import { NavController, Platform, ModalController, AlertController } from 'ionic-angular';
 import { AdresEkle } from '../adresekle/adresekle';
 
 @Component({
@@ -9,7 +9,7 @@ import { AdresEkle } from '../adresekle/adresekle';
 export class ProfilePage {
   mapiYukle: boolean;
   adreslerim: string = "2";
-  constructor(public navCtrl: NavController, public plt: Platform, public modalCtrl: ModalController) {
+  constructor(public navCtrl: NavController, public plt: Platform, public modalCtrl: ModalController, public alertCtrl: AlertController) {
     if (plt.is('android')) {
       this.mapiYukle = true;
     }
@@ -36,6 +36,17 @@ export class ProfilePage {
       modal.present();
     }
   }
+
+  siparisAyrinti(siparisid: any) {
+    //TODO: siparisid yi çek
+    let alert = this.alertCtrl.create({
+      title: 'Kebap',
+      subTitle: '04.03.2017 - 15 TL',
+      buttons: ['OK']
+    });
+    alert.present();
+  }
+
 }//Class ProfilePage End
 
 
