@@ -21,20 +21,31 @@ export class AdresEkle {
 
   ngAfterViewInit() {
     if (this.mapiYukle) {
+      //MAPın transparent ismesinden kaynaklı bugu gidermek için
+      let approots: HTMLCollectionOf<Element> = document.getElementsByClassName('app-root');
+      for (var index = 0; index < approots.length; index++) {
+        let approot: Element = approots[index];
+        approot.setAttribute("style", "opacity:0");
+      }
       this.loadMap();
     }
     console.log("Load Map Çalıştı");
   }
 
+  ngOnDestroy() {
+    let approots: HTMLCollectionOf<Element> = document.getElementsByClassName('app-root');
+    for (var index = 0; index < approots.length; index++) {
+      let approot: Element = approots[index];
+      approot.setAttribute("style", "opacity:1");
+    }
+  }
 
   dismiss() {
     this.viewCtrl.dismiss();
   }
   loadMap() {
     let element: HTMLElement = document.getElementById('map2');
-
     let map = new GoogleMap(element);
-
     // listen to MAP_READY event
     map.on(GoogleMapsEvent.MAP_READY); //.then(() => console.log('Map is ready!'));
 
