@@ -6,7 +6,7 @@ import { HomePage } from '../pages/homepage/homepage';
 import { ProfilePage } from '../pages/profile/profile';
 import { UrunlerPage } from '../pages/urunler/urunler';
 import { Harita } from '../pages/harita/harita';
-import { Page1 } from '../pages/page1/page1';
+import { FavorilerPage } from '../pages/favoriler/favoriler';
 
 
 @Component({
@@ -28,7 +28,7 @@ export class MyApp {
       { title: 'Profil', component: ProfilePage },
       { title: 'Harita', component: Harita },
       { title: 'Sipariş Ver', component: UrunlerPage },
-      { title: 'Favoriler', component: Page1 }
+      { title: 'Favoriler', component: FavorilerPage }
     ];
 
   }

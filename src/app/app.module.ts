@@ -6,7 +6,7 @@ import { ProfilePage } from '../pages/profile/profile';
 import { UrunlerPage } from '../pages/urunler/urunler';
 import { UrunPage } from '../pages/urun/urun';
 import { Harita } from '../pages/harita/harita';
-import { Page1 } from '../pages/page1/page1';
+import { FavorilerPage } from '../pages/favoriler/favoriler';
 import { AdresEkle } from '../pages/adresekle/adresekle';
 
 @NgModule({
@@ -18,7 +18,7 @@ import { AdresEkle } from '../pages/adresekle/adresekle';
     UrunPage,
     AdresEkle,
     Harita,
-    Page1
+    FavorilerPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -32,7 +32,7 @@ import { AdresEkle } from '../pages/adresekle/adresekle';
     UrunPage,
     AdresEkle,
     Harita,
-    Page1
+    FavorilerPage
   ],
   providers: [{ provide: ErrorHandler, useClass: IonicErrorHandler }]
 })

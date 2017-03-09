@@ -3,10 +3,10 @@ import { NavController } from 'ionic-angular';
 import { UrunPage } from '../../pages/urun/urun';
 
 @Component({
-  selector: 'page-urunler',
-  templateUrl: 'urunler.html'
+  selector: 'page-favoriler',
+  templateUrl: 'favoriler.html'
 })
-export class UrunlerPage {
+export class FavorilerPage {
 
   constructor(public navCtrl: NavController) {
 
