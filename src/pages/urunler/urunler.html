@@ -4,47 +4,53 @@
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>Ürünler</ion-title>
+    <ion-buttons end>
+      <button ion-button clear>
+        <!-- //TODO Sayıyı Değiştir -->
+         <ion-icon name="basket"></ion-icon><ion-badge color="primary">3</ion-badge>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
 
-<ion-list>
-  <ion-item (click)="itemTapped($event, 'asd')">
-    <ion-thumbnail item-left>
-      <img src="assets/images/kebab.jpg">
-    </ion-thumbnail>
-    <h2>Kebap</h2>
-    <h3>Serhat Bey Efendi Gilleri</h3>
-    <p>15dk</p>
-    <p style="color: blue" item-right>25TL</p>
-  </ion-item>
-  <ion-item>
-    <ion-thumbnail item-left>
-      <img src="assets/images/durum.jpg">
-    </ion-thumbnail>
-    <h2>Dürüm</h2>
-    <h3>Birden Çok Satıcı</h3>
-    <p>10dk</p>
-    <p style="color: blue" item-right>5TL - 7TL</p>
-  </ion-item>
-  <ion-item>
-    <ion-thumbnail item-left>
-      <img src="assets/images/portakal.jpg">
-    </ion-thumbnail>
-    <h2>Portakal</h2>
-    <p>20dk</p>
-    <p style="color: blue" item-right>3TL</p>
-  </ion-item>
-  <ion-item>
-    <ion-thumbnail item-left>
-      <img src="assets/images/kebab.jpg">
-    </ion-thumbnail>
-    <h2>Deneme</h2>
-    <p>Deneme</p>
-    <p style="color: blue" item-right>1TL</p>
-  </ion-item>
-</ion-list>
+  <ion-list>
+    <ion-item (click)="itemTapped($event, 'asd')">
+      <ion-thumbnail item-left>
+        <img src="assets/images/kebab.jpg">
+      </ion-thumbnail>
+      <h2>Kebap</h2>
+      <h3>Serhat Bey Efendi Gilleri</h3>
+      <p>15dk</p>
+      <p style="color: blue" item-right>25TL</p>
+    </ion-item>
+    <ion-item>
+      <ion-thumbnail item-left>
+        <img src="assets/images/durum.jpg">
+      </ion-thumbnail>
+      <h2>Dürüm</h2>
+      <h3>Birden Çok Satıcı</h3>
+      <p>10dk</p>
+      <p style="color: blue" item-right>5TL - 7TL</p>
+    </ion-item>
+    <ion-item>
+      <ion-thumbnail item-left>
+        <img src="assets/images/portakal.jpg">
+      </ion-thumbnail>
+      <h2>Portakal</h2>
+      <p>20dk</p>
+      <p style="color: blue" item-right>3TL</p>
+    </ion-item>
+    <ion-item>
+      <ion-thumbnail item-left>
+        <img src="assets/images/kebab.jpg">
+      </ion-thumbnail>
+      <h2>Deneme</h2>
+      <p>Deneme</p>
+      <p style="color: blue" item-right>1TL</p>
+    </ion-item>
+  </ion-list>
 
 
 </ion-content>
